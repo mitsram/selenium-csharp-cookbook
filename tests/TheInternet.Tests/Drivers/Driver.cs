@@ -8,7 +8,7 @@ public class Driver
 {
     public static IWebDriver InitializeDriver()
     {   
-        // If not env variable set, default is Chrome
+        // If no env variable set, default is Chrome
         var factory = new DriverFactory(GetBrowserTypeFromEnv());
         return factory.CreateDriver();        
     }
