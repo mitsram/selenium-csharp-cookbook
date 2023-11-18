@@ -3,15 +3,19 @@ using OpenQA.Selenium;
 
 namespace TheInternet.Tests.Specs;
 
-[TestFixture]
 public class BaseTest
 {
-    IWebDriver? driver;
+    protected IWebDriver? driver;
 
     [SetUp]
     public void Setup()
     {
-        driver = DriverFactory.InitializeDriver();
-        driver.Navigate().GoToUrl("");
+        driver = DriverFactory.InitializeDriver();        
+    }
+
+    [TearDown]
+    public void Teardown()
+    {
+        driver!.Quit();
     }
 }
