@@ -4,11 +4,11 @@ namespace TheInternet.Tests.Pages;
 
 public class BasePage 
 {
-    protected IWebDriver? _driver;
+    protected IWebDriver driver;
 
     public BasePage(IWebDriver driver)
     {
-        _driver = driver;
+        this.driver = driver;
     }
 
 }

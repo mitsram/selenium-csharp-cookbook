@@ -13,16 +13,16 @@ public class LoginPage : BasePage
     {
     }
 
-    public void Login(String username, String password)
+    public void Login(string username, string password)
     {
-        _driver!.FindElement(txtUsername).SendKeys(username);
-        _driver.FindElement(txtPassword).SendKeys(password);
-        _driver.FindElement(btnLogin).Click();
+        driver!.FindElement(txtUsername).SendKeys(username);
+        driver.FindElement(txtPassword).SendKeys(password);
+        driver.FindElement(btnLogin).Click();
 
     }
 
     public bool IsLoggedIn() 
     {
-        return _driver!.FindElement(By.TagName("h2")).Text == "Secure Area";
+        return driver!.FindElement(By.TagName("h2")).Text == "Secure Area";
     }
 }

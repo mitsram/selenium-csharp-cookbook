@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
+using TheInternet.Tests.Drivers;
 
 namespace TheInternet.Tests.Specs;
 
@@ -10,7 +11,7 @@ public class BaseTest
     [SetUp]
     public void Setup()
     {
-        driver = DriverFactory.InitializeDriver();        
+        driver = Driver.InitializeDriver();        
     }
 
     [TearDown]
